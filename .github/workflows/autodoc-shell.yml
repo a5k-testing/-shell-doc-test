@@ -1,0 +1,15 @@
+---
+name: "Auto-doc shell scripts"
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  shdoc:
+    name: "shdoc"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v2
+      - name: "Documentation generator"
+        uses: a5k-testing/shell-doc-action-test@main
