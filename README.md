@@ -1,1 +1,1 @@
-# -shell-doc-test
+# shell-doc-test
