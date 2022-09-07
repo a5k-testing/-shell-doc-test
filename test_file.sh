@@ -16,7 +16,7 @@
 # @example
 #    echo "test: $(say-hello World)"
 #
-# @arg $1 string A value to print
+# @arg $1 boolean A value to print
 #
 # @exitcode 0 If successful.
 # @exitcode 1 If an empty string passed.
