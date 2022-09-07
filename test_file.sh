@@ -16,7 +16,10 @@
 # @example
 #    echo "test: $(say-hello World)"
 #
-# @arg $1 boolean A value to print
+# @arg $1 boolean Default installation setting
+# @arg $2 string Name of the app
+# @arg $3 string Filename of the app
+# @arg $4 string Folder of the app
 #
 # @exitcode 0 If successful.
 # @exitcode 1 If an empty string passed.
@@ -43,7 +46,7 @@ fi
 # @arg $4 string Folder of the app
 #
 # @exitcode 0 If successful.
-setup_app()  # $1 => Default setting  $2 => Name  $3 => Filename  $4 => Folder
+setup_app()
 {
   local _install _app_conf _min_sdk _max_sdk
   _install="${1:-0}"
