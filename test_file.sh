@@ -3,7 +3,8 @@
 # @description My super function.
 #
 # @arg $1 string A value to print
-say-hello() {
+say-hello()
+{
     if [[ ! "$1" ]]; then
         return 1;
     fi
