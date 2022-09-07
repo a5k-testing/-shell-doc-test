@@ -10,31 +10,6 @@
 
 # @section Example functions
 
-# @description Setup an app for later installation 1.
-#
-# @example
-#    echo "test: $(say-hello World)"
-#
-# @arg $1 boolean Default installation setting
-# @arg $2 string Name of the app
-# @arg $3 string Filename of the app
-# @arg $4 string Folder of the app
-#
-# @exitcode 0 If successful.
-say-hello()
-{
-    if [[ ! "$1" ]]; then
-        return 1;
-    fi
-
-    echo "Hello $1"
-}
-
-if test -z "${RECOVERY_PIPE:-}" || test -z "${OUTFD:-}" || test -z "${ZIPFILE:-}" || test -z "${TMP_PATH:-}" || test -z "${DEBUG_LOG:-}"; then
-  echo 'Some variables are NOT set.'
-  exit 90
-fi
-
 # @description Setup an app for later installation.
 #
 # @arg $1 boolean Default installation setting
@@ -43,8 +18,7 @@ fi
 # @arg $4 string Folder of the app
 #
 # @exitcode 0 If successful.
-setup_app()
-{
+setup_app() {
   local _install _app_conf _min_sdk _max_sdk
   _install="${1:-0}"
   _app_conf="$(file_get_first_line_that_start_with "${4:?}/${3:?}|" "${TMP_PATH}/files/system-apps/file-list.dat")" || ui_error "Failed to get app config for '${2}'"
