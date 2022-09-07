@@ -8,6 +8,9 @@
 #      * c
 #      * etc
 
+
+# @section Example functions
+
 # @description My super function.
 # Not thread-safe.
 #
