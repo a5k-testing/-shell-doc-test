@@ -10,8 +10,7 @@
 
 # @section Example functions
 
-# @description My super function.
-# Not thread-safe.
+# @description Setup an app for later installation 1.
 #
 # @example
 #    echo "test: $(say-hello World)"
@@ -22,9 +21,6 @@
 # @arg $4 string Folder of the app
 #
 # @exitcode 0 If successful.
-# @exitcode 1 If an empty string passed.
-#
-# @see validate()
 say-hello() {
     if [[ ! "$1" ]]; then
         return 1;
