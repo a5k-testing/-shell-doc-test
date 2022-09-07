@@ -21,7 +21,8 @@
 # @arg $4 string Folder of the app
 #
 # @exitcode 0 If successful.
-say-hello() {
+say-hello()
+{
     if [[ ! "$1" ]]; then
         return 1;
     fi
