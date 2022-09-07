@@ -8,6 +8,13 @@
 #      * c
 #      * etc
 
+# SPDX-FileCopyrightText: (c) 2016 ale5000
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileType: SOURCE
+
+# shellcheck disable=SC3043
+# SC3043: In POSIX sh, local is undefined
+
 
 # @section Example functions
 
