@@ -13,3 +13,9 @@ jobs:
         uses: actions/checkout@v2
       - name: "Documentation generator"
         uses: a5k-testing/shell-doc-action-test@main
+      - name: "aaa"
+        shell: bash
+        run: |
+          # Compiling shdoc...
+          action_path="${{ github.action_path }}"
+          ls "${action_path}/docs/"
